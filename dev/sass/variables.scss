@@ -1,8 +1,22 @@
-///fonts///
-$font-primary: "Open Sans";
-$font-secondary:  "monospace";
-$font-size: 16px;
+// main colors
 
-///colors///
-$primary-color: #222;
-$secondary-color: #f00;
+$black: #000000;
+$black_light: #292D32;
+
+$white: #FFFFFF;
+$white_light: #FAFBFF;
+
+$grey: #9197B3;
+$grey_light: #B5B7C0;
+
+$hover_purple: #5932EA;
+
+
+// status colors
+
+$active_bg: #16c09861;
+$active_border: #00B087;
+$active_color: #008767;
+
+$inactive_bg: #FFC5C5;
+$inactive_color: #DF0404; //inactive_color

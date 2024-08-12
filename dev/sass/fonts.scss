@@ -1,7 +1,8 @@
-@font-face {
-    font-family: 'Gilroy-Regular';
-    src: url('./assets/fonts/Gilroy-Regular.woff') format('woff');
-    font-weight: normal; 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
     font-style: normal;
-    font-display: swap;
+    font-size: 14px;
 }

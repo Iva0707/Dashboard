@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    text-decoration: none;
+    text-transform: none;
+    list-style: none;
+    & li {
+        cursor: pointer;
+    }
+}
+
+button,
+input {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+        border: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+        border: none;
+    }
+}
+
+.container {
+    height: 100vh;
+    background-color: rgb(251, 230, 190);
+}
