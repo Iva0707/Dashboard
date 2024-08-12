@@ -18,12 +18,17 @@ input {
     cursor: pointer;
     border: none;
     outline: none;
+    background-color: unset;
     &:hover,
     &:active,
     &:focus {
         outline: none;
         border: none;
     }
+}
+
+input {
+    cursor: text;
 }
 
 a {
@@ -40,4 +45,11 @@ a {
 .container {
     height: 100vh;
     background-color: rgb(251, 230, 190);
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	-webkit-appearance:none;
 }
