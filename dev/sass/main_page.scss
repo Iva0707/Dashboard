@@ -1,5 +1,6 @@
 .container {
     display: flex;
+    position: relative;
     & .sidebar {
         display: flex;
         flex-direction: column;
@@ -9,6 +10,14 @@
         padding: 35px 28px 76px 28px;
         background-color: $white;
         box-shadow: 0 10px 60px 0 #e2ecf980;
+        &.show {
+            display: flex;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+        }
         & .sidebar__logo-row {
             position: relative;
             max-width: 195px;
@@ -27,7 +36,7 @@
                 height: 20px;
                 width: 20px;
                 font-weight: 500;
-                font-size: 10px;
+                font-size: 1rem;
                 color: #838383;
             }
         }
@@ -41,6 +50,8 @@
                     border-radius: 8px;
                     font-weight: 500;
                     color: $grey;
+                    font-size: 1.4rem;
+
                     display: flex;
                     align-items: center;
                     gap: 14px;
@@ -104,12 +115,11 @@
                 flex-direction: column;
                 & .sidebar__user-name {
                     font-weight: 500;
-                    letter-spacing: 0.01em;
                     color: $black;
+                    font-size: 1.4rem;
                 }
                 & .sidebar__user-position {
-                    font-size: 12px;
-                    letter-spacing: 0.01em;
+                    font-size: 1.2rem;
                     color: #757575;
                 }
             }
@@ -121,13 +131,73 @@
         background-color: $white_light;
         display: flex;
         flex-direction: column;
-        & .content__title {
-            font-weight: 500;
-            font-size: 24px;
-            color: $black;
-            text-transform: capitalize;
+        & .content__header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 41px;
+            & .content__title {
+                font-weight: 500;
+                font-size: 2.4rem;
+                color: $black;
+                text-transform: capitalize;
+            }
+            & .content__header-burger--container {
+                padding: 8px 0px;
+                cursor: pointer;
+                &.active {
+                    & div {
+                        background-color: transparent;
+                        &:before {
+                            transform: rotate(-45deg);
+                            top: 0;
+                            transition: .2s;
+                        }
+                        &:after {
+                            transform: rotate(45deg);
+                            bottom: 0;
+                            transition: .2s;
+                        }
+                    }
+                }
+                & .content__button-burger {
+                    width: 23px;
+                    height: 2px;
+                    background-color: $white;
+                    background-color: black;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    transition: .2s;
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        width: 23px;
+                        height: 2px;
+                        background-color: red;
+                        top: -6px;
+                        left: 0;
+                        transition: .2s;
+                    }
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        width: 23px;
+                        height: 2px;
+                        background-color: green;
+                        bottom: -6px;
+                        left: 0;
+                        transition: .2s;
+                    }
+                }
+            }
         }
+
+
+
+
+
         & .content__container {
             background-color: $white;
             box-shadow: 0 10px 60px 0 #e2ecf980;
@@ -145,12 +215,13 @@
                 & .content__info-column {
                     & .content__subtitle {
                         font-weight: 600;
-                        font-size: 22px;
+                        font-size: 2.2rem;
                         color: $black;
                         margin-bottom: 7px;
                     }
                     & .content__active-customers {
-                        font-size: 14px;
+                        font-size: 1.4rem;
+    
                         color: #16c098;
                         &:hover {
                             transform: scale(1.02);
@@ -180,7 +251,8 @@
                         background: #f9fbff;
                         border: none;
                         border-radius: 10px;
-                        font-size: 12px;
+                        font-size: 1.2rem;
+    
                         color: #b5b7c0;
                         &::placeholder {
                             color: #b5b7c0;
@@ -190,7 +262,6 @@
                         &:focus {
                             box-shadow: 0px 0px 11px 2px #3d3c3c12;
                             transition: .2s;
-
                         }
                     }
                 }
@@ -204,9 +275,10 @@
                 & th, td {
                     text-align: left;
                     overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
                     padding-right: 15px;
+                    word-wrap: break-word;
+                    overflow-wrap: break-word;
+                    font-size: 1.4rem;
                 }
                 & th:nth-child(1) {
                     width: 21%;
@@ -254,7 +326,7 @@
                     height: 40px;
                     & .content__table-status {
                         font-weight: 500;
-                        font-size: 14px;
+                        font-size: 1.4rem;
                         text-align: center;
                         padding: 4px 18px;
                         border-radius: 4px;
@@ -280,6 +352,7 @@
                     & .content__footer-info {
                         font-weight: 500;
                         color: #b5b7c0;
+                        font-size: 1.4rem;
                     }
                     & .content__footer-pagination {
                         display: flex;
@@ -322,7 +395,7 @@
                             gap: 12px;
                             & .content__footer-item {
                                 font-weight: 500;
-                                font-size: 12px;
+                                font-size: 1.2rem;
                                 color: #404b52;
                                 display: flex;
                                 justify-content: center;
