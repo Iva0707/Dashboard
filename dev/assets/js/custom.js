@@ -92,3 +92,37 @@ prevButton.addEventListener('click', () => {
 nextButton.addEventListener('click', () => {
     footerItems.forEach(item => item.classList.remove('content__footer-item--active'))
 })
+
+
+
+
+
+
+
+
+const fadeInText = document.querySelector(".fade-in");
+
+document.addEventListener("DOMContentLoaded", function() {
+    fadeInText.classList.remove("visible")
+    setTimeout(function() {
+        fadeInText.classList.add("visible")
+    }, 100);  // Задержка перед появлением текста
+})
+
+const animateListItem = document.querySelector('.sidebar__list-item')
+console.log(animateListItem);
+
+
+// animateListItem.forEach(item => {
+//     item.addEventListener('DOMContentLoaded', function() {
+//         setTimeout(function() {
+//             item.classList.remove('test-animation')
+//         }, 100);  // Задержка перед появлением текста
+//     })
+// })
+
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        animateListItem.classList.remove("test-animation")
+    }, 100)  // Задержка перед появлением текста
+})

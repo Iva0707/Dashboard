@@ -58,6 +58,10 @@
                     gap: 14px;
                     position: relative;
                     overflow: hidden;
+                    &.test-animation {
+                        transform: translateX(-110%);
+                        transition: .2s;
+                    }
                     &.sidebar__list-item--selected {
                         background-color: $hover_purple;
                         color: $white;
@@ -347,14 +351,18 @@
                         height: 40px;
                         border-collapse: collapse;
                         border-spacing: 0;
-                        
-
                         & .content__table-status {
                             font-weight: 500;
                             font-size: 1.4rem;
                             text-align: center;
-                            padding: 4px 18px;
+                            // padding: 4px 18px;
                             border-radius: 4px;
+                            width: 80px;
+                            height: 25px;
+                            display: inline-block;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
                             &.content__table-status--active {
                                 color: #008767;
                                 background-color: #16c09861;
