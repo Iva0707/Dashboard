@@ -42,7 +42,7 @@
             & .sidebar__update-version {
                 position: absolute;
                 content: '';
-                bottom: 7px;
+                bottom: 0px;
                 right: -24px;
                 height: 20px;
                 width: 20px;
@@ -148,6 +148,7 @@
             & .sidebar__user-info {
                 display: flex;
                 flex-direction: column;
+                gap: 5px;
                 & .sidebar__user-name {
                     font-weight: 500;
                     color: $black;
@@ -304,7 +305,6 @@
                         &:focus {
                             transition: .2s;
                             box-shadow: 0px 0px 9px 4px $box_shadow;
-
                         }
                     }
                 }

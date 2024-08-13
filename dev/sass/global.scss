@@ -43,8 +43,21 @@ a {
     }
 }
 
-.container {
-    height: 100vh;
+body {
+    overflow: hidden;
+    background-color: $white_light;
+    &.body__overflow--hidden:before {
+        content: "";
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backdrop-filter: blur(1px);
+        background-color: #d4cff40f;
+        z-index: 1;
+        transition: .2s;
+    }
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -72,28 +85,15 @@ input[type="search"]::-webkit-search-results-decoration {
     background: $hover_purple;
 }
 
-.body__overflow--hidden {
-    overflow: hidden;
-}
-
-body {
-    overflow: hidden;
-    background-color: $white_light;
-    &.body__overflow--hidden:before {
-        content: "";
-        width: 100vw;
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        left: 0;
-        backdrop-filter: blur(1px);
-        background-color: #d4cff40f;
-        z-index: 1;
-        transition: .2s;
-    }
-}
-
 ::selection {
     background-color: #d4cff447;
     color: $black_light;
+}
+
+.container {
+    height: 100vh;
+}
+
+.body__overflow--hidden {
+    overflow: hidden;
 }
