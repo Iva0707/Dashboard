@@ -1,10 +1,18 @@
 @media screen and (max-width: 1199px) {
-    .container .content {
-        padding: 40px 50px;
-        width: 100vw;
-    }
-
-    .container .sidebar {
-        display: none;
+    .container {
+        & .sidebar {
+            visibility: hidden;
+            transform: translateX(-100%);
+            position: absolute;
+            transition: .2s;
+            top: 0;
+            bottom: 0;
+            z-index: 1;
+            padding: 35px 28px 40px 28px;
+        }
+        & .content {
+            padding: 40px 50px;
+            width: 100vw;
+        }
     }
 }

@@ -1,4 +1,33 @@
 @media screen and (max-width: 1024px) {
+    html {
+        font-size: 9px;
+    }
+    .container {
+        & .sidebar {
+            padding: 35px 28px 30px 28px;
+        }
+        & .content {
+            padding: 30px 30px;
+            & .content__container {
+                padding: 30px;
+                & .content__info-row {
+                    margin-bottom: 30px;
+                }
+                & .content__table-wrapper {
+                    overflow-x: auto;
+                    & .content__table {
+                        & th, td {
+                            white-space: nowrap;
+                        }
+                        & .content__table-head::after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 

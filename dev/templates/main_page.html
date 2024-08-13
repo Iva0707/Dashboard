@@ -8,12 +8,12 @@
         </div>
         <nav class="sidebar__nav">
             <ul class="sidebar__nav-list">
-                <li><img src="assets/img/dashboard_icon.svg" alt="icon">Dashboard</li>
-                <li><img src="assets/img/product_icon.svg" alt="icon">Product</li>
-                <li><img src="assets/img/customers_icon.svg" alt="icon">Customers</li>
-                <li><img src="assets/img/income_icon.svg" alt="icon">Income</li>
-                <li><img src="assets/img/promote_icon.svg" alt="icon">Promote</li>
-                <li><img src="assets/img/help_icon.svg" alt="icon">Help</li>
+                <li class="sidebar__list-item"><img src="assets/img/dashboard_icon.svg" alt="icon">Dashboard</li>
+                <li class="sidebar__list-item"><img src="assets/img/product_icon.svg" alt="icon">Product</li>
+                <li class="sidebar__list-item"><img src="assets/img/customers_icon.svg" alt="icon">Customers</li>
+                <li class="sidebar__list-item"><img src="assets/img/income_icon.svg" alt="icon">Income</li>
+                <li class="sidebar__list-item"><img src="assets/img/promote_icon.svg" alt="icon">Promote</li>
+                <li class="sidebar__list-item"><img src="assets/img/help_icon.svg" alt="icon">Help</li>
             </ul>
         </nav>
         <div class="sidebar__user-row">
@@ -29,7 +29,7 @@
     <div class="content">
         <div class="content__header-row">
             <h1 class="content__title">Hello Evano 👋🏼,</h1>
-            <div id="burger" class="content__header-burger--container">
+            <div id="burger" class="content__burger-container">
                 <div class="content__button-burger"></div>
             </div>
         </div>
@@ -40,97 +40,99 @@
                     <button class="content__active-customers">Active Members</button>
                 </div>
                 <div class="content__info-search">
-                    <div class="btt">
+                    <div>
                         <label for="search"></label>
                         <input type="search" placeholder="Search" id="search" autocomplete="off">
                     </div>
                 </div>
             </div>
-            <table class="content__table">
-                <thead>
-                    <tr class="content__table-head">
-                        <th>Customer Name</th>
-                        <th>Company</th>
-                        <th>Phone Number</th>
-                        <th>Email</th>
-                        <th>Country</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="content__table-body">
-                        <td>Jane Cooper</td>
-                        <td>Microsoft</td>
-                        <td>(225) 555-0118</td>
-                        <td>jane@microsoft.com</td>
-                        <td>United States</td>
-                        <td><span class="content__table-status content__table-status--inactive">Active</span></td>
-                    </tr>
-                    <tr class="content__table-body">
-                        <td>Floyd Miles</td>
-                        <td>Yahoo</td>
-                        <td>(205) 555-0100</td>
-                        <td>floyd@yahoo.com</td>
-                        <td>Kiribati</td>
-                        <td><span class="content__table-status content__table-status--inactive">Active</span></td>
-                    </tr>
-                    <tr class="content__table-body">
-                        <td>Ronald Richards</td>
-                        <td>Adobe</td>
-                        <td>(302) 555-0107</td>
-                        <td>ronald@adobe.com</td>
-                        <td>Israel</td>
-                        <td><span class="content__table-status content__table-status--active">Active</span></td>
-                    </tr>
-                    <tr class="content__table-body">
-                        <td>Jane Cooper</td>
-                        <td>Microsoft</td>
-                        <td>(225) 555-0118</td>
-                        <td>jane@microsoft.com</td>
-                        <td>United States</td>
-                        <td><span class="content__table-status content__table-status--active">Active</span></td>
-                    </tr>
-                    <tr class="content__table-body">
-                        <td>Floyd Miles</td>
-                        <td>Yahoo</td>
-                        <td>(205) 555-0100</td>
-                        <td>floyd@yahoo.com</td>
-                        <td>Kiribati</td>
-                        <td><span class="content__table-status content__table-status--active">Active</span></td>
-                    </tr>
-                    <tr class="content__table-body">
-                        <td>Ronald Richards</td>
-                        <td>Adobe</td>
-                        <td>(302) 555-0107</td>
-                        <td>ronald@adobe.com</td>
-                        <td>Israel</td>
-                        <td><span class="content__table-status content__table-status--active">Active</span></td>
-                    </tr>
-                    <tr class="content__table-body">
-                        <td>Jane Cooper</td>
-                        <td>Microsoft</td>
-                        <td>(225) 555-0118</td>
-                        <td>jane@microsoft.com</td>
-                        <td>United States</td>
-                        <td><span class="content__table-status content__table-status--active">Active</span></td>
-                    </tr>
-                    <tr class="content__table-body">
-                        <td>Floyd Miles</td>
-                        <td>Yahoo</td>
-                        <td>(205) 555-0100</td>
-                        <td>floyd@yahoo.com</td>
-                        <td>Kiribati</td>
-                        <td><span class="content__table-status content__table-status--active">Active</span></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="content__table-wrapper">
+                <table class="content__table">
+                    <thead>
+                        <tr class="content__table-head">
+                            <th>Customer Name</th>
+                            <th>Company</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Country</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="content__table-body">
+                            <td>Jane Cooper</td>
+                            <td>Microsoft</td>
+                            <td>(225) 555-0118</td>
+                            <td>jane@microsoft.com</td>
+                            <td>United States</td>
+                            <td><span class="content__table-status content__table-status--inactive">Active</span></td>
+                        </tr>
+                        <tr class="content__table-body">
+                            <td>Floyd Miles</td>
+                            <td>Yahoo</td>
+                            <td>(205) 555-0100</td>
+                            <td>floyd@yahoo.com</td>
+                            <td>Kiribati</td>
+                            <td><span class="content__table-status content__table-status--inactive">Active</span></td>
+                        </tr>
+                        <tr class="content__table-body">
+                            <td>Ronald Richards</td>
+                            <td>Adobe</td>
+                            <td>(302) 555-0107</td>
+                            <td>ronald@adobe.com</td>
+                            <td>Israel</td>
+                            <td><span class="content__table-status content__table-status--active">Active</span></td>
+                        </tr>
+                        <tr class="content__table-body">
+                            <td>Jane Cooper</td>
+                            <td>Microsoft</td>
+                            <td>(225) 555-0118</td>
+                            <td>jane@microsoft.com</td>
+                            <td>United States</td>
+                            <td><span class="content__table-status content__table-status--active">Active</span></td>
+                        </tr>
+                        <tr class="content__table-body">
+                            <td>Floyd Miles</td>
+                            <td>Yahoo</td>
+                            <td>(205) 555-0100</td>
+                            <td>floyd@yahoo.com</td>
+                            <td>Kiribati</td>
+                            <td><span class="content__table-status content__table-status--active">Active</span></td>
+                        </tr>
+                        <tr class="content__table-body">
+                            <td>Ronald Richards</td>
+                            <td>Adobe</td>
+                            <td>(302) 555-0107</td>
+                            <td>ronald@adobe.com</td>
+                            <td>Israel</td>
+                            <td><span class="content__table-status content__table-status--active">Active</span></td>
+                        </tr>
+                        <tr class="content__table-body">
+                            <td>Jane Cooper</td>
+                            <td>Microsoft</td>
+                            <td>(225) 555-0118</td>
+                            <td>jane@microsoft.com</td>
+                            <td>United States</td>
+                            <td><span class="content__table-status content__table-status--active">Active</span></td>
+                        </tr>
+                        <tr class="content__table-body">
+                            <td>Floyd Miles</td>
+                            <td>Yahoo</td>
+                            <td>(205) 555-0100</td>
+                            <td>floyd@yahoo.com</td>
+                            <td>Kiribati</td>
+                            <td><span class="content__table-status content__table-status--active">Active</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <div class="content__footer">
                 <div class="content__footer-row">
                     <p class="content__footer-info">Showing data 1 to 8 of  256K entries</p>
                     <div class="content__footer-pagination">
                         <button class="content__footer-prev content__footer-arrow"></button>
                         <ul class="content__footer-list">
-                            <li class="content__footer-item"><a href="#">1</a></li>
+                            <li class="content__footer-item content__footer-item--active"><a href="#">1</a></li>
                             <li class="content__footer-item"><a href="#">2</a></li>
                             <li class="content__footer-item"><a href="#">3</a></li>
                             <li class="content__footer-item"><a href="#">4</a></li>

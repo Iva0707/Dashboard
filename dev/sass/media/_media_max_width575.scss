@@ -1,3 +1,39 @@
 @media screen and (max-width: 575px) {
-    
+    .container {
+        & .content {
+            & .content__container {
+                & .content__info-row {
+                    align-items: flex-start;
+                    flex-direction: column;
+                    margin-bottom: 25px;
+                    gap: 10px;
+                    & .content__info-search {
+                        width: 100%;
+                        & input {
+                            width: 100%;
+                        }
+                    }
+                }
+                & .content__table-wrapper {
+                    margin-bottom: 20px;
+                }
+                & .content__footer {
+                    & .content__footer-row {
+                        align-items: flex-end;
+                        gap: 10px;
+                        flex-direction: column;
+                        & .content__footer-info {
+                            padding-right: 0px;
+                        }
+                        & .content__footer-pagination {
+                            gap: 5px;
+                            & .content__footer-list {
+                                gap: 3px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

@@ -1,0 +1,28 @@
+@media (min-width: 2000px) {
+    html {
+        height: 100%;
+        margin: 0;
+    }
+    
+    .container {
+        width: 100%; 
+        max-width: 2000px; 
+        min-height: 500px;
+        max-height: 1300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto; 
+        position: absolute; 
+        top: 50%;
+        left: 50%; 
+        transform: translate(-50%, -50%);
+        & .sidebar {
+            height: 100%;
+        }
+
+        & .content {
+            height: 100%;
+        }
+    }
+}

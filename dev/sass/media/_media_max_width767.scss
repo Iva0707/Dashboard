@@ -1,3 +1,22 @@
 @media screen and (max-width: 767px) {
-
+    html {
+        font-size: 8px;
+    }
+    .container {
+        & .content {
+            & .content__container {
+                padding: 20px;
+                & .content__footer {
+                    & .content__footer-row  {
+                        & .content__footer-pagination {
+                            gap: 7px;
+                            & .content__footer-list {
+                                gap: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

@@ -45,7 +45,6 @@ a {
 
 .container {
     height: 100vh;
-    background-color: rgb(251, 230, 190);
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -53,4 +52,48 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
 	-webkit-appearance:none;
+}
+
+::-webkit-scrollbar {
+    height: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: $white_light;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $hover_purple;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $hover_purple;
+}
+
+.body__overflow--hidden {
+    overflow: hidden;
+}
+
+body {
+    overflow: hidden;
+    background-color: #FAFBFF;
+    &.body__overflow--hidden:before {
+        content: "";
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backdrop-filter: blur(1px);
+        background-color: #d4cff40f;
+        z-index: 1;
+        transition: .2s;
+    }
+}
+
+::selection {
+    background-color: #d4cff447;
+    color: $black_light;
 }
