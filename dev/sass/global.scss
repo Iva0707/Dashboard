@@ -55,7 +55,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 ::-webkit-scrollbar {
-    height: 9px;
+    height: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -78,7 +78,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 body {
     overflow: hidden;
-    background-color: #FAFBFF;
+    background-color: $white_light;
     &.body__overflow--hidden:before {
         content: "";
         width: 100vw;
@@ -96,17 +96,4 @@ body {
 ::selection {
     background-color: #d4cff447;
     color: $black_light;
-}
-
-
-
-
-
-.fade-in {
-    opacity: 0;
-    transition: opacity 1s ease-in;
-}
-
-.fade-in.visible {
-    opacity: 1;
 }

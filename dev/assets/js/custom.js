@@ -50,7 +50,7 @@ const listItems = document.querySelectorAll('.sidebar__list-item')
 
 listItems[0].addEventListener('click', () => {
     listItems.forEach(item => item.classList.remove('sidebar__list-item--selected'))
-    // window.location.href = 'index.html';
+    // window.location.href = 'index.html'
     closesidebar()
 })
 
@@ -66,7 +66,7 @@ listItems.forEach((item, index) => {
 
 document.addEventListener('click', () => {
     listItems.forEach(item => {
-        item.classList.remove('sidebar__list-item--selected');
+        item.classList.remove('sidebar__list-item--selected')
     })
 })
 
@@ -93,36 +93,38 @@ nextButton.addEventListener('click', () => {
     footerItems.forEach(item => item.classList.remove('content__footer-item--active'))
 })
 
+//___________animation______________
 
+const title = document.querySelector('.content__title')
+const content = document.querySelector('.content__container')
+const navList = document.querySelectorAll('.sidebar__list-item')
 
+setTimeout(() => title.classList.add('active'), 200)
+setTimeout(() => content.classList.add('active'), 300)
+setTimeout(() => sidebar.classList.add('active'), 300)
 
+for (let i = 0; i < navList.length; i++) {
+    setTimeout(() => {
+        navList[i].classList.add('active')
 
+        navList[i].addEventListener('transitionend', function changeTransition() {
+            navList[i].classList.add('fast-transition')
+            navList[i].removeEventListener('transitionend', changeTransition)
+        })
+    }, 400 + i * 100)
+}
 
-
-
-const fadeInText = document.querySelector(".fade-in");
-
-document.addEventListener("DOMContentLoaded", function() {
-    fadeInText.classList.remove("visible")
-    setTimeout(function() {
-        fadeInText.classList.add("visible")
-    }, 100);  // Задержка перед появлением текста
+sidebar.addEventListener('transitionend', function changeTransition() {
+    sidebar.classList.add('fast-transition')
+    sidebar.removeEventListener('transitionend', changeTransition)
 })
 
-const animateListItem = document.querySelector('.sidebar__list-item')
-console.log(animateListItem);
+title.addEventListener('transitionend', function changeTransition() {
+    title.classList.add('fast-transition')
+    title.removeEventListener('transitionend', changeTransition)
+})
 
-
-// animateListItem.forEach(item => {
-//     item.addEventListener('DOMContentLoaded', function() {
-//         setTimeout(function() {
-//             item.classList.remove('test-animation')
-//         }, 100);  // Задержка перед появлением текста
-//     })
-// })
-
-document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(function() {
-        animateListItem.classList.remove("test-animation")
-    }, 100)  // Задержка перед появлением текста
+content.addEventListener('transitionend', function changeTransition() {
+    content.classList.add('fast-transition')
+    content.removeEventListener('transitionend', changeTransition)
 })
